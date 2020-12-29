@@ -1,0 +1,117 @@
+@import "variable";
+@import "responsive";
+.section-accordion {
+    text-align: center;
+    margin-bottom: 100px;
+    @include tablet {
+        margin-top: 30px;
+    }
+    .content {
+        margin: 0 150px;
+        @include small-laptop {
+            margin: 0;
+        }
+        @include mobile {
+            margin: 0 10px;
+        }
+    }
+    .title {
+        font-family: "MontserratBlack";
+        color: $title-color;
+        margin: auto;
+        @include tablet {
+            font-size: 4vw;
+        }
+        @include mobile {
+            font-size: 3vw;
+        }
+        @include min-mobile {
+            font-size: 5vw;
+        }
+    }
+    .description {
+        font-family: "MontserratItalic";
+        color: $description-color;
+        font-size: 25px;
+        margin: auto;
+        margin-top: 15px;
+        @include tablet {
+            font-size: 3vw;
+        }
+        @include mobile {
+            font-size: 4vw;
+        }
+    }
+    .accordion {
+        margin: auto;
+        width: 79%;
+        @include min-mobile {
+            width: 100%;
+        }
+        .card {
+            border: none;
+        }
+        .card-header {
+            height: 80px;
+            background-color: #77ccdf;
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            .item-title {
+                color: #ffffff;
+                font-family: "MyriadProRegular";
+                text-align: left;
+                font-size: 22px;
+                @include min-mobile {
+                    font-size: 5vw;
+                }
+            }
+            .arrow {
+                height: 26px;
+                width: 42px;
+                transform: rotate(0deg);
+                transition: transform 0.2s linear;
+                @include min-mobile {
+                    width: 10%;
+                    height: 16px;
+                }
+            }
+            &:has(.collapsed) {
+                .arrow {
+                    transform: rotate(-180deg);
+                    transition: transform 0.2s linear;
+                }
+            }
+            &:not(.collapsed) {
+                .arrow {
+                    transform: rotate(180deg);
+                    transition: transform 0.2s linear;
+                }
+            }
+            // &.collapsed {
+            //     .arrow {
+            //         height: 26px;
+            //         width: 42px;
+            //         @include min-mobile {
+            //             width: 10%;
+            //             height: 16px;
+            //         }
+            //     }
+            // }
+        }
+        .card-body {
+            background-color: #dbf7f8;
+            font-family: "HelveticaNeueRegular";
+            color: #434345;
+            text-align: left;
+            font-size: 22px;
+            padding: 12px 60px;
+            @include min-mobile {
+                padding: 12px 36px;
+                font-size: 4vw;
+            }
+        }
+    }
+}

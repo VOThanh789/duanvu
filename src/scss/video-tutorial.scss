@@ -1,0 +1,38 @@
+@import "variable";
+.video-tutorial {
+    margin-top: 65px;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        @include mobile {
+            height: 40vw;
+        }
+    }
+
+    .custom-col {
+        padding: 75px 15px;
+        @include mobile {
+            padding: 5vw 15px;
+        }
+    }
+
+    div {
+        .video-title {
+            font-family: "MontserratBlack";
+            color: $title-color;
+            font-size: 32px;
+            @include mobile{
+                font-size: 4vw;
+            }
+            @include tablet{
+                font-size: 3vw;
+            }
+        }
+        .video-description {
+            font-family: "HelveticaNeueLight";
+            color: $description-color;
+            font-size: 17px;
+        }
+    }
+}

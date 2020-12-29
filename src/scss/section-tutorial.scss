@@ -1,0 +1,180 @@
+@import "variable";
+@import "responsive";
+.section-tutorial {
+    margin-top: 40px;
+
+    .break-line {
+        width: 100%;
+        height: auto;
+        background: url("../images//icon_star2-divider.png") repeat-x center;
+        background-size: auto;
+        @include mobile {
+            background: none;
+        }
+
+        .section-title {
+            font-family: "MontserratBlack";
+            color: $title-color;
+            font-size: 40px;
+            text-align: center;
+            margin: auto;
+            background-color: #ffffff;
+
+            &-1 {
+                width: 40.5%;
+            }
+
+            &-2 {
+                width: 45%;
+            }
+
+            @include mobile {
+                width: 100%;
+                font-size: 5vw;
+            }
+        }
+
+        // .star {
+        //     width: stretch;
+        //     height: 100%;
+        //     background-image: url("../images//icon_star2-divider.png");
+        //     background-repeat: repeat-x;
+        //     background-position: center;
+        //     background-size: auto;
+
+        //     @include tablet {
+        //         display: none;
+        //     }
+        // }
+    }
+    .item-step {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 38px;
+        &:first-child {
+            margin-top: 40px;
+        }
+        &.flex-row-reverse {
+            .eclip {
+                left: -24px;
+            }
+
+            @include mobile {
+                img {
+                    margin-left: auto;
+                }
+
+                .eclip {
+                    left: 15px;
+                    @include mobile {
+                        left: 0px;
+                    }
+                    @include min-mobile {
+                        left: 15px;
+                    }
+                }
+            }
+        }
+        //flex-direction: row-reverse;
+
+        .group-img {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            //flex-direction: row-reverse;
+            position: relative;
+
+            img {
+                // border: 1px solid $circle-step-color;
+                width: 86%;
+                @include mobile {
+                    width: 90%;
+                }
+            }
+
+            .eclip {
+                position: absolute;
+                width: 90px;
+                height: 90px;
+                background: $circle-step-color;
+                border-radius: 999px;
+                top: 50%;
+                right: 40px;
+                transform: translateY(-50%);
+                @include small-laptop {
+                    right: 30px;
+                }
+                @include tablet {
+                    right: 30px;
+                    width: 22vw;
+                    height: 22vw;
+                }
+                @include mobile {
+                    right: 2px;
+                    width: 12vw;
+                    height: 12vw;
+                }
+                @include min-mobile {
+                    right: 15px;
+                    width: 22vw;
+                    height: 22vw;
+                }
+
+                span {
+                    font-family: "MontserratBlack";
+                    color: #ffffff;
+                    font-size: 40px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .text-content {
+            padding-right: 70px;
+
+            @include mobile {
+                padding-right: 15px;
+                padding-top: 20px;
+                text-align: justify;
+                br {
+                    display: none;
+                }
+            }
+
+            .title {
+                font-family: "MontserratBold";
+                color: $title-color;
+                font-size: 35px;
+                @include tablet {
+                    font-size: 4vw;
+                }
+                @include mobile {
+                    font-size: 4vw;
+                }
+            }
+            .description {
+                font-family: "MontserratRegular";
+                color: $description-color;
+                font-size: 21px;
+                @include tablet {
+                    font-size: 2vw;
+                }
+                @include mobile {
+                    font-size: 3vw;
+                }
+            }
+            .warning {
+                margin-top: 20px;
+            }
+        }
+    }
+    .warning {
+        font-family: "MontserratSemiBold";
+        margin-top: 38px;
+        color: red;
+    }
+}

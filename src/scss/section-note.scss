@@ -1,0 +1,153 @@
+@import "variable";
+@import "responsive";
+.section-note {
+    text-align: center;
+    .content {
+        margin: 0 150px;
+        @include small-laptop {
+            margin: 0;
+        }
+        @include mobile {
+            margin: 0 10px;
+        }
+    }
+    .title {
+        font-family: "MontserratBlack";
+        color: $title-color;
+        margin: auto;
+        @include tablet {
+            font-size: 4vw;
+        }
+        @include mobile {
+            font-size: 6vw;
+        }
+    }
+    .description {
+        font-family: "MontserratItalic";
+        color: $description-color;
+        font-size: 25px;
+        margin: auto;
+        margin-top: 15px;
+        @include tablet {
+            font-size: 3vw;
+        }
+        @include mobile {
+            font-size: 4vw;
+        }
+    }
+    .steps-note {
+        margin-top: 50px;
+        @include mobile {
+            margin-top: 10px;
+        }
+        justify-content: center;
+        .item-wrap {
+            min-height: 570px;
+            @include tablet {
+                min-height: 848px;
+            }
+            @include mobile {
+                width: 80%;
+                min-height: unset;
+                margin-top: 60px;
+            }
+            @include min-mobile {
+                min-height: fit-content;
+            }
+            &:first-child {
+                .note-item {
+                    background-color: #fe9b77;
+                    .icon {
+                        margin-top: 27px;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .note-item {
+                    background-color: #f2eaf0;
+                    .text-content {
+                        color: #434345;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                .note-item {
+                    background-color: #9bd8de;
+                }
+            }
+            &:nth-child(4) {
+                .note-item {
+                    background-color: #eda9b5;
+                }
+            }
+            &:last-child {
+                .note-item {
+                    background-color: #fea6a6;
+                }
+            }
+        }
+        .note-item {
+            position: relative;
+            margin: 0 27px;
+            @include small-laptop {
+                margin: 0;
+                min-height: 520px;
+            }
+            @include tablet {
+                margin: 0 20px;
+            }
+            @include min-mobile{
+                min-height: fit-content;
+            }
+            min-height: 473px;
+            border-radius: 10px;
+            .number {
+                box-shadow: 0px 0px 1px 0.1px;
+                font-size: 40px;
+                color: #434345;
+                font-family: "MontserratBlack";
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 90px;
+                height: 90px;
+                background: #fff;
+                border-radius: 999px;
+                right: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .group-text {
+                display: flex;
+                flex-direction: column;
+                padding: 50px 25px 0;
+                @include small-laptop {
+                    padding: 50px 10px 0;
+                }
+                @include mobile {
+                    padding: 50px 18px 0;
+                }
+                align-items: center;
+                .text-content {
+                    font-size: 16px;
+                    @include tablet {
+                        font-size: 4vw;
+                    }
+                    @include mobile {
+                        font-size: 3vw;
+                    }
+                    @include min-mobile {
+                        font-size: 4vw;
+                    }
+                    color: #ffffff;
+                    font-family: "MontserratRegular";
+                }
+                .icon {
+                    height: 140px;
+                    width: 140px;
+                }
+            }
+        }
+    }
+}
